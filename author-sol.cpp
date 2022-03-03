@@ -2,7 +2,7 @@
 using namespace std;
 
 void TestCase() {
-	int n;
+	long long n;
 	string s;
 	char ch;
 	cin >> n >> s >> ch;
@@ -13,9 +13,9 @@ void TestCase() {
 		}
 	}
 	p.push_back(n);
-	int ans = n * (n + 1) / 2; // total no. of substrings of the whole string
+	long long ans = n * (n + 1) / 2; // total no. of substrings of the whole string
 	for (int i = 1; i < (int) p.size(); i++) {
-		int len = p[i] - p[i-1] - 1; // length of the substring where the character is not found
+		long long len = p[i] - p[i-1] - 1; // length of the substring where the character is not found
 		// len * (len + 1) / 2 = total no. of substrings of the substring where the character is not found
 		ans -= len * (len + 1) / 2; // subtract the calculated value from the total no. of substrings
 	}
